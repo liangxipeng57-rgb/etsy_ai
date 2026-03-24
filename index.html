@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etsy AI Studio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="https://unpkg.com/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#8D4B00',
+              secondary: '#006A63',
+              surface: '#FCF9F4',
+              'surface-container-low': '#F6F3EE',
+              'surface-container': '#F0EDE9',
+              'surface-container-high': '#EBE8E3',
+              'surface-container-highest': '#E5E2DD',
+              'surface-container-lowest': '#FFFFFF',
+              'on-surface': '#1C1C19',
+              'on-surface-variant': '#554336',
+              outline: '#887364',
+              'outline-variant': '#DBC2B0',
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', '"Noto Sans SC"', 'sans-serif'],
+            },
+            boxShadow: {
+              ambient: '0px 20px 40px rgba(85, 67, 54, 0.08)',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+      }
+
+      body {
+        margin: 0;
+        background: #fcf9f4;
+        color: #1c1c19;
+        font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif;
+      }
+
+      #root {
+        min-height: 100vh;
+      }
+
+      .primary-gradient {
+        background: linear-gradient(135deg, #8d4b00 0%, #b15f00 100%);
+      }
+
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.82);
+        backdrop-filter: blur(12px);
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(219, 194, 176, 0.28);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: rgba(136, 115, 100, 0.45);
+        border-radius: 999px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(136, 115, 100, 0.72);
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-primary selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
